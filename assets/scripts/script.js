@@ -9,7 +9,7 @@ let bodyHTML=document.getElementsByTagName('body');
 let hangedMan=document.getElementById('hangsmanimage');
 //define word pool
 // let wordPool=['JavaScript','variables','michaelstears','jackritchiesjokes','davidrocks','samlawparthumanpartmachine','tomdoylelaugh'];
-let wordPool=['JavaScript','variables'];
+let wordPool=['JavaScript','variables','davidimpeyrocks','bootcampspot','samlawfortutor','jackrichiesjokes','timsbeard'];
 //define blank slate
 let blankSlate=[];
 let word='';
@@ -49,6 +49,11 @@ function initiateGameOver(){
     getStats();
     startButton.disabled=false;
     resetScore.disabled=false;
+    gameWord.innerHTML='';
+    for (let character in word){
+        gameWord.innerHTML+='   '+word[character]+'   ';
+    }
+
 }
 
 // Reset score function

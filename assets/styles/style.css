@@ -56,7 +56,7 @@ body {
     ". . . . . hangsmanimage"
     ". . . . . hangsmanimage"
     ". . . . . hangsmanimage"
-    "game-word game-word game-word game-word . . ";
+    "game-word game-word game-word game-word . hangsmanimage ";
 }
 #hangsmanimage {
   grid-area: hangsmanimage;
@@ -140,7 +140,7 @@ body {
 h1 {
   color: whitesmoke;
   margin-top: 5vh;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
   font-size: 400%;
 }
 
