@@ -1,0 +1,167 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "banner"
+    "game"
+    "game"
+    "game"
+    "game";
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#hangsman {
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+#hangsman::after {
+  content: "xx";
+  font-size: 50%;
+  position: absolute;
+  left: 10%;
+  top: -25%;
+}
+#hangsman::before {
+  content: "\/\\";
+  font-size: 50%;
+  position: absolute;
+  left: 10%;
+  bottom: -25%;
+}
+#banner {
+  grid-area: banner;
+  text-align: center;
+  background-color: rgb(41, 41, 65);
+  height: 100%;
+}
+#game {
+  grid-area: game;
+  text-align: center;
+  display: grid;
+  grid-template-areas: ". word word word word score";
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 54%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  height: 100%;
+}
+#word {
+  grid-area: word;
+  display: grid;
+  grid-template-areas:
+    ". . . . . hangsmanimage"
+    ". . . . . hangsmanimage"
+    ". . . . . hangsmanimage"
+    ". . . . . hangsmanimage"
+    "game-word game-word game-word game-word . . ";
+}
+#hangsmanimage {
+  grid-area: hangsmanimage;
+  width: 50%;
+  background-color: transparent;
+  background: transparent;
+  border: groove 5px blueviolet;
+  margin: 0;
+}
+#game-word {
+  grid-area: game-word;
+  font-size: 200%;
+}
+#score {
+  grid-area: score;
+}
+
+#word,
+#score {
+  margin-top: 5vh;
+  height: 80%;
+  width: 90%;
+  padding: 25px;
+  border: solid 5px whitesmoke;
+  background: linear-gradient(
+    180deg,
+    rgba(246, 168, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(246, 168, 0, 1) 100%
+  );
+}
+
+#score {
+  display: grid;
+  grid-template-areas:
+    "wins wins-count ."
+    "losses losses-count reset"
+    ". . ."
+    "time-keeper time-keeper time-keeper"
+    "time-keeper time-keeper time-keeper"
+    "time-keeper time-keeper time-keeper"
+    "time-keeper time-keeper time-keeper"
+    "time-keeper time-keeper time-keeper"
+    "time-keeper time-keeper time-keeper";
+}
+#wins {
+  grid-area: wins;
+}
+#losses {
+  grid-area: losses;
+}
+#wins-count {
+  grid-area: wins-count;
+}
+#losses-count {
+  grid-area: losses-count;
+}
+#reset {
+  grid-area: reset;
+}
+#time-keeper {
+  grid-area: time-keeper;
+  border: solid 3px whitesmoke;
+  background-color: rgb(41, 41, 65);
+  color: whitesmoke;
+  border-radius: 10px;
+  display: grid;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". time-value ."
+    ". time-label .";
+}
+#time-value {
+  grid-area: time-value;
+  font-size: 300%;
+}
+#time-label {
+  grid-area: time-label;
+}
+h1 {
+  color: whitesmoke;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  font-size: 400%;
+}
+
+button {
+  color: black;
+  background: linear-gradient(
+    0deg,
+    rgba(246, 168, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(246, 168, 0, 1) 100%
+  );
+  padding: 10px;
+  font-size: 150%;
+  font-weight: 150%;
+  border-radius: 10px;
+  border-color: whitesmoke;
+  height: fit-content;
+}
+
+label {
+  font-weight: 50%;
+  font-size: 150%;
+  padding: 2px;
+}

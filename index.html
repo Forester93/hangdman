@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangsman</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+</head>
+<body>
+    <section id='banner'>
+        <h1>Hang<em id='hangsman'>D</em>man</h1>
+        <button id='start-game'>
+            Start Game
+        </button>
+    </section>
+    <section id='game'>
+        <section id='word'>
+            <label id='game-word'></label>
+            <img src='./assets/images/Drawing.jpeg' id='hangsmanimage'>
+        </section>
+        <section id='score'>
+                <label id='wins'>Wins:</label>
+                <label id='wins-count'></label>
+                <label id='losses'>Losses:</label>
+                <label id='losses-count'></label>
+            <button id='reset'>Reset Score</button>
+            <section id='time-keeper'>
+                <label id='time-value'></label>
+                <label id='time-label'></label>
+            </section>
+        </section>
+    </section>
+    <script src="./assets/scripts/script.js"></script>   
+</body>
+</html>
