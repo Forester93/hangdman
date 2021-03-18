@@ -9,7 +9,7 @@ let bodyHTML=document.getElementsByTagName('body');
 let hangedMan=document.getElementById('hangsmanimage');
 //define word pool
 // let wordPool=['JavaScript','variables','michaelstears','jackritchiesjokes','davidrocks','samlawparthumanpartmachine','tomdoylelaugh'];
-let wordPool=['JavaScript','variables','davidimpeyrocks','bootcampspot','samlawfortutor','jackrichiesjokes','timsbeard'];
+let wordPool=['JavaScript','variables','davidimpeyrocks','bootcampspot','samlawfortutor','jackrichiesjokes'];
 //define blank slate
 let blankSlate=[];
 let word='';
@@ -172,9 +172,7 @@ function validateKey(event){
 }
 
 window.addEventListener('keydown',validateKey);
-window.addEventListener('load',function(){
-    getStats();
-});
+window.addEventListener('load',getStats);
 startButton.addEventListener('click',function(){
     getStats();
     gameWord.innerHTML='';
